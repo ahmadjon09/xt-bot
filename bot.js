@@ -13,7 +13,7 @@ const upload = multer({ dest: 'uploads/' })
 const bot = new TelegramBot('7727607417:AAGRkbmn4QcTg4HhadIDoJp0Z9LHw0Y9UmM', {
   polling: false
 })
-const CHAT_ID = '-1002401476305' // Telegram kanalning ID-si
+const CHAT_ID = '-1002447257466' // Telegram kanalning ID-si
 
 // Post yuborish uchun endpoint
 app.post('/send-to-telegram', upload.array('imgs'), async (req, res) => {
