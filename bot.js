@@ -29,7 +29,7 @@ app.post('/send-to-telegram', upload.array('imgs'), async (req, res) => {
     }))
 
     // Caption (matn) yaratish
-    const caption = `👶 *${name.toUpperCase()} uchun aksiyada!*\n\n💰 *Narxi:* ${price} so‘m 😇\n🚚 *Dastafka:* Bor✨\n✈️ *Yetib borish muddati:* 20 kun\n📅 *Aksiya muddati:* ${startDate} - ${endDate}\n\nShoshiling! ✅\n\n📩 Murojaat uchun: @programm_weeb\n👤 Bosh admin: @yakubovv_667`
+    const caption = `🥶 *${name.toUpperCase()} uchun aksiyada!*\n\n💰 *Narxi:* ${price} so‘m 😇\n🚚 *Dastafka:* Bor✨\n✈️ *Yetib borish muddati:* 20 kun\n📅 *Aksiya muddati:* ${startDate} - ${endDate}\n\nShoshiling! ✅\n\n📩 Murojaat uchun: @programm_weeb\n👤 Bosh admin: @yakubovv_667`
 
     // Agar rasm bo‘lsa, media group yuboramiz
     if (media.length > 0) {
