@@ -1,6 +1,7 @@
+require("dotenv").config();
 const { Telegraf } = require("telegraf");
 
-const BOT_TOKEN = "7727607417:AAGRkbmn4QcTg4HhadIDoJp0Z9LHw0Y9UmM";
+const BOT_TOKEN = process.env.BOT_TOKEN;
 const bot = new Telegraf(BOT_TOKEN);
 
 bot.start((ctx) => {
@@ -27,6 +28,12 @@ bot.command("help", (ctx) => {
   }
 });
 
+// **Ping orqali botni jonli saqlash (UptimeRobot uchun)**
+setInterval(() => {
+  console.log("✅ Bot hali ham ishlayapti...");
+}, 600000); // 10 daqiqada bir marta ishlaydi
+
+// **Xatolarni ushlash**
 process.on("uncaughtException", (error) => {
   console.error("❌ Kutilmagan xatolik:", error);
 });
@@ -35,6 +42,7 @@ process.on("unhandledRejection", (reason, promise) => {
   console.error("❌ Kutilmagan va'da rad etildi:", reason);
 });
 
+// **Botni ishga tushirish**
 (async () => {
   try {
     console.log("🚀 Bot ishga tushirilmoqda...");
